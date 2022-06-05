@@ -8,7 +8,8 @@
 (In Real Life, this would be Deployed to the Polygon MainNet)
 Smart Contract deployed with the account: ------------------
 https://kovan.etherscan.io/address/------------------
-+-NOTE:\_ The Smart Contract of this Test is not Deployed because as TestNets is regarded,
+
+-NOTE:\_ The Smart Contract of this Test is not Deployed because as TestNets is regarded,
 ChainLink(The Service used to GET the Data from the A.P.I. to the Smart Contract) supports only the
 Kovan Ethereum TestNet and Alchemy(The Service used to Deploy Smart Contracts) doesn't supports it,
 since they deprecated it and only use the Goerli Ethereum TestNet.
