@@ -1,0 +1,49 @@
+Q-1. How would you store a message upon a creation of a smart contract?
+What is the fastest approach?
+What is the most cost-efficient approach?
+Should we be able to update previously stored text or not?
+How would this choice affect the code?
+
+Q-2. Smart contracts cannot access off-chain data (our API) directly.
+What is a typical solution for this?
+This is a very simple task, and you can implement a solution by yourself but what risks would it pose for the larger project?
+How would you develop production-ready code that needs to access off-chain data?
+
+Q-4. Please show that your solution works and solves the task. How do you usually test your programs and smart contract solutions?
+What kind of tests do you usually write along with your solution? What tests would you suggest to make sure that this smart contract
+is ready to use?
+
+Q-5. What are the potential security risks of your solution and how to minimize them?
+
+Q-6. How would you make this solution profitable?
+
+A-1. I would store it as you can see I have done it in "Database.sol".
+
+Usually, the Fastest and Safest approach for Solidity Smart Contacts Development is to use
+Trustable and Community Developed, Approved and Tested Libraries or Templates(Like OpenZeppelin or Open Source
+Code of other De.Fi. Companies like SushiSwap, etc) to Save Time and to avoid re-inventing the wheel.
+
+The most cost-efficient approach would be to Deploy the S.C.s in the Polygon MainNet due to its Low Gas Costs
+and, ideally, to delegate all the Data Storage(Emails, Passwords, etc) to a Traditional Web Back-End like Node.js/Express.js
+and to handle in the Smart Contracts as less information Processing(Ex:_ Calculus) and Storage as possible since Writing
+on the Blockchain Costs Money.
+
+A-2. The Typical Solution for this is using an Oracles Service like ChainLink, and I would use it in a Production-Ready code too.
+In order to determine the potential risks that would it pose for a larger project, I would need to know the Features of that
+hypothetical larger project.
+
+A-4. In a Real Life Project, I would take all the Days of work necessary to write Carefully all the Unit Tests required for Covering
+every Function of the Smart Contract with this particular Complexity Added of Interacting with 1 ERC-20 Token, 1 External Smart Contract
+and Kovan TestNet Ethereum which are currently Deployed on a Live TestNet.
+As I said, Testing all that would take me more than 1 Day of work, and I do not think that it is worth spending all that time on what is
+just a Test. If you want to see how I handle Testing with Real Life Projects, we can engage in a Call and I can show you a set of Large
+and Complex Unit Tests that I have Developed for the Open Art Market Project (I cannot send you the code Directly because it is Protected under
+N.D.A.).
+Alternatively, you can ask an Experienced Solidity Developer to Review the Code of "Database.sol" for you and to tell you about its quality.
+
+A-5. The only potential security risk of my solution would be an ReEntrancy Attack to the Public Payable Function "sendMessage",
+and I Minimized it by Implementing the OpenZeppelin Library ReentrancyGuard and by Doing the Transfer of MATIC (Money) First and
+Updating the S.C. Data later inside the Function.
+
+A-6. I made it Profitable by Charging a Modifiable Fee to the Sending of Each Message, and the Fee goes to the S.C. Owner
+(the one who Deployed it).
